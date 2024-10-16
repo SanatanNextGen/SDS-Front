@@ -1,7 +1,12 @@
 "use client";
 import { TermsMock } from "@/mocks/Terms";
 
-const Section = ({ title, content }: any) => (
+interface TermProps {
+  title: string;
+  content: string;
+}
+
+const Section: React.FC<TermProps> = ({ title, content }) => (
   <section className="mt-14 w-full flex flex-col items-center justify-start overflow-hidden rounded-2xl bg-primary-900 p-6">
     <article className="flex w-full flex-col items-center justify-start gap-2">
       <h1 className="text-2xl font-bold leading-tight text-secondary-50 md:text-3xl">
