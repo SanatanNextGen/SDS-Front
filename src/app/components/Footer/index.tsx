@@ -111,7 +111,7 @@ const Footer = () => {
         <FooterSocialLinks
           socialMedia={[
             {
-              social_name: "+91 7880001415",
+              social_name: "+917880001415",
               href: "#",
               icon: MdWhatsapp,
             },
