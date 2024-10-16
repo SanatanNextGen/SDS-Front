@@ -14,7 +14,7 @@ const Footer = () => {
   const path = usePathname();
   const router = useRouter();
 
-  const handleLinkClick = (href: any) => {
+  const handleLinkClick = (href: string) => {
     setLoading(true);
     setTimeout(() => {
       router.push(href);
