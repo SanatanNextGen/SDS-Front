@@ -6,7 +6,7 @@ describe('Banner Component', () => {
     const { getByText } = render(<Banner />)
     const headingElement = getByText(/Join the revolution/i)
     const subheadingElement = getByText(
-      /Faça parte do Juniors Developers Group/i,
+      /Faça parte do Developers Group/i,
     )
     expect(headingElement).toBeInTheDocument()
     expect(subheadingElement).toBeInTheDocument()

@@ -1,7 +1,7 @@
-'use client'
-import { useCallback } from 'react'
-import { useRouter } from 'next/navigation'
-import { CardVacanciesProps } from './types'
+"use client";
+import { useCallback } from "react";
+import { useRouter } from "next/navigation";
+import { CardVacanciesProps } from "./types";
 
 const CardVacancies = ({
   techs,
@@ -9,10 +9,10 @@ const CardVacancies = ({
   description,
   id,
 }: CardVacanciesProps) => {
-  const route = useRouter()
+  const route = useRouter();
   const handlePushRoute = useCallback(() => {
-    route.push(`/vacancy/${id}`)
-  }, [id, route])
+    route.push(`/vacancy/${id}`);
+  }, [id, route]);
   return (
     <section className="min-w-96 my-2 h-full w-full rounded-lg border border-l-4 border-primary border-y-transparent border-r-transparent bg-primary-900 p-4 xl:w-[30rem]">
       <span className="rounded-lg bg-primary-800 p-2 text-xs text-secondary">
@@ -44,11 +44,11 @@ const CardVacancies = ({
           onClick={handlePushRoute}
           className="bg-gradient-btn mt-4 h-12 w-full rounded-lg border border-primary text-base text-secondary outline-none transition-all ease-in-out hover:bg-primary-400 hover:font-semibold hover:text-secondary-800"
         >
-          Volunteering
+          Apply Now
         </button>
       </article>
     </section>
-  )
-}
+  );
+};
 
-export default CardVacancies
+export default CardVacancies;

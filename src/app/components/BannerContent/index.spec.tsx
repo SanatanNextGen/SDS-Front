@@ -11,7 +11,7 @@ describe('<BannerContent/>', () => {
   it('should render subheading text correctly', () => {
     const { getByText } = render(<BannerContent />)
     const subheadingElement = getByText(
-      /Faça parte do Juniors Developers Group/i,
+      /Faça parte do Developers Group/i,
     )
     expect(subheadingElement).toBeInTheDocument()
   })
@@ -25,7 +25,7 @@ describe('<BannerContent/>', () => {
   it('should render the correct font sizes for subheadings', () => {
     const { getByText } = render(<BannerContent />)
     const subheadingElement = getByText(
-      /Faça parte do Juniors Developers Group/i,
+      /Faça parte do Developers Group/i,
     )
     expect(subheadingElement).toHaveClass('text-xs sm:text-base md:text-xl')
   })

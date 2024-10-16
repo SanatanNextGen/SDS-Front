@@ -31,7 +31,7 @@ const Header = () => {
         href={`${path === '/' ? '#contact' : '/#contact'}`}
         className="hidden h-10 w-36 items-center justify-center rounded-lg bg-primary-400 text-base font-semibold text-secondary-950 transition-all hover:text-white md:flex"
       >
-        Contact
+        Contact US
       </Link>
     </header>
   )

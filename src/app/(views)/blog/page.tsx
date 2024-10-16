@@ -58,7 +58,7 @@ export default function Blog() {
       </section>
 
       {/* <section className="mt-14 grid grid-cols-1 gap-20 md:grid-cols-2 xl:grid-cols-3"> */}
-      <section className="mt-14 flex flex-wrap items-center justify-center gap-20 md:justify-between">
+      {/* <section className="mt-14 flex flex-wrap items-center justify-center gap-20 md:justify-between">
         {PostsMock.map((post) => (
           <CardBlog
             key={post.id}
@@ -68,7 +68,7 @@ export default function Blog() {
             date={post.createdAt}
           />
         ))}
-      </section>
+      </section> */}
     </section>
   )
 }

@@ -1,20 +1,37 @@
 "use client";
+import { useState } from "react";
 import FooterLogo from "../FooterLogo";
 import FooterContainer from "../FooterContainer";
 import FooterNavLinks from "../FooterNavLinks";
 import FooterSocialLinks from "../FooterSocialLinks";
 import FooterCopyright from "../FooterCopyright";
-import { SlSocialLinkedin } from "react-icons/sl";
+import { SlSocialLinkedin, SlLocationPin } from "react-icons/sl";
 import { MdWhatsapp, MdOutlineMailOutline } from "react-icons/md";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Footer = () => {
+  const [loading, setLoading] = useState(false);
   const path = usePathname();
+  const router = useRouter();
+
+  const handleLinkClick = (href: any) => {
+    setLoading(true);
+    setTimeout(() => {
+      router.push(href);
+      setLoading(false);
+    }, 1000); // Simulating a network request
+  };
+
   return (
     <footer
       id="contact"
-      className="bg-gradient-footer flex w-full items-center justify-center bg-primary pt-20"
+      className="bg-gradient-footer flex w-full items-center justify-center bg-primary pt-20 relative"
     >
+      {loading && (
+        <div className="loader">
+          <div className="spinner"></div>
+        </div>
+      )}
       <FooterContainer>
         <section className="flex w-full flex-wrap items-center justify-between md:items-start">
           <FooterLogo />
@@ -38,7 +55,10 @@ const Footer = () => {
                   name: "Projects",
                   href: `${path === "/" ? "#projects" : "/#projects"}`,
                 },
-              ]}
+              ].map((link) => ({
+                ...link,
+                onClick: () => handleLinkClick(link.href),
+              }))}
             />
 
             <FooterNavLinks
@@ -60,25 +80,31 @@ const Footer = () => {
                   name: "UX/UI",
                   href: "/vacancies",
                 },
-              ]}
+              ].map((link) => ({
+                ...link,
+                onClick: () => handleLinkClick(link.href),
+              }))}
             />
 
             <FooterNavLinks
-              title="Enterprise"
+              title="Privacy"
               links={[
                 {
                   name: "Privacy",
-                  href: "#",
+                  href: "/privacy",
                 },
                 {
                   name: "Terms and conditions of use",
-                  href: "#",
+                  href: "/terms",
                 },
                 {
                   name: "All rights reserved",
-                  href: "#",
+                  href: "",
                 },
-              ]}
+              ].map((link) => ({
+                ...link,
+                onClick: () => handleLinkClick(link.href),
+              }))}
             />
           </aside>
         </section>
@@ -95,9 +121,15 @@ const Footer = () => {
               icon: MdOutlineMailOutline,
             },
             {
-              social_name: "linkedin.com/company/SDS/",
+              social_name: "linkedin.com/company/SDS",
               href: "https://www.linkedin.com/company/juniors-developers-group/mycompany/",
               icon: SlSocialLinkedin,
+            },
+            {
+              social_name:
+                "Sanatan House, 284-B, New Loha Mandi, Dewas Naka, Indore (M.P)",
+              href: "https://www.linkedin.com/company/juniors-developers-group/mycompany/",
+              icon: SlLocationPin,
             },
           ]}
         />

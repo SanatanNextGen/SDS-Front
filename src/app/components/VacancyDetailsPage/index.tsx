@@ -81,7 +81,7 @@ export default function VacancyCardPage({
       <section className="mt-10 w-full bg-secondary-880 px-4 py-16 xl:px-6">
         <span className="flex h-16 w-full gap-5 border border-x-transparent border-b-secondary-100 border-t-transparent">
           <h1 className=" text-2xl text-secondary-50 xl:text-xxl">
-          Volunteering
+          Apply Now
           </h1>
         </span>
 
@@ -110,9 +110,9 @@ export default function VacancyCardPage({
                 <Input
                   type="text"
                   name="cellphone"
-                  label="Telefone"
+                  label="Phone Number"
                   icon={FiPhone}
-                  placeholder="(64) 9 8135-2900"
+                  placeholder="(+91) 9 8135-2900"
                 />
 
                 <section className="flex flex-col gap-8 md:flex-row">

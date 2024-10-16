@@ -22,7 +22,7 @@ describe('<VacanciesHeader/>', () => {
     render(<VacanciesHeader />)
 
     expect(
-      screen.getByText('Be part of the Juniors Developers Group:'),
+      screen.getByText('Be part of the Developers Group:'),
     ).toBeInTheDocument()
     expect(
       screen.getByText('where talent is voluntary and innovation is infinite!'),

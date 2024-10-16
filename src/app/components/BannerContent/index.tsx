@@ -8,7 +8,7 @@ const BannerContent = () => {
         </h1>
       </section>
       <p className="mt-4 flex flex-col items-center justify-center px-14 text-center text-xs text-secondary-50 sm:text-base md:mt-8 md:p-0 md:text-xl">
-        Be part of the Juniors Developers Group:
+        Be part of the Developers Group:
         <span>where talent is voluntary and innovation is infinite!</span>
       </p>
     </article>

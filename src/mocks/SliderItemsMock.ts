@@ -1,7 +1,7 @@
 export const SliderItemsMock = [
   {
     id: 1,
-    image: "/people.png",
+    image: "/naresh.jpeg",
     name: "Naresh Yadav",
     text: "Just wanted to say a huge thank you for the incredible work on the Sanatan Express website! It looks amazing and functions perfectly. Your attention to detail and creativity have truly brought our vision to life. We’ve already received positive feedback from our customers. Looking forward to working together again soon!",
   },

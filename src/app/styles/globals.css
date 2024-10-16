@@ -1,3 +1,5 @@
+/* styles/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,42 +8,41 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
   --bg-default: #222223;
   --scrollbar-track: #00EBF0;
   --scrollbar-thumb: #222223;
 }
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 3px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: var(--scrollbar-thumb);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background: var(--scrollbar-track);
 }
 
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
 }
 
-ul, li{
+ul, li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -53,6 +54,7 @@ html {
 #__next,
 body {
   @apply h-full;
+  background-color: var(--bg-default);
 }
 
 @layer components {
@@ -61,12 +63,12 @@ body {
   }
 }
 
-@layer utilities{
-  .bg-gradient-center{
+@layer utilities {
+  .bg-gradient-center {
     background: radial-gradient(
       circle,
-      rgba(25,46,75,1) 0%,
-      rgba(34,34,35,1) 32%
+      rgba(25, 46, 75, 1) 0%,
+      rgba(34, 34, 35, 1) 32%
     );
   }
 
@@ -75,19 +77,29 @@ body {
       0deg, 
       rgba(0, 235, 240, 0.19), 
       rgba(0, 235, 240, 0.19)
-      );
-    }
-  }
-
-  .bg-gradient-footer{
-    background: radial-gradient(
-    49.05% 51.14% at 50.08% 51.38%, 
-    rgba(87, 144, 255, 0.14) 0%, 
-    rgba(75, 146, 233, 0.082171) 41.31%, 
-    rgba(58, 149, 201, 0) 100%
     );
   }
 
-body {
-  background-color: var(--bg-default);
+  .bg-gradient-footer {
+    background: radial-gradient(
+      49.05% 51.14% at 50.08% 51.38%, 
+      rgba(87, 144, 255, 0.14) 0%, 
+      rgba(75, 146, 233, 0.082171) 41.31%, 
+      rgba(58, 149, 201, 0) 100%
+    );
+  }
+
+  @layer utilities {
+    .loader {
+      @apply fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-70 bg-white z-50;
+    }
+  
+    .spinner {
+      @apply border-4 border-t-4 rounded-full w-16 h-16 animate-spin;
+      border-color: white; /* Outer color */
+      border-top-color: #00EBF0; /* Top color */
+    }
+  }
+  
+  
 }

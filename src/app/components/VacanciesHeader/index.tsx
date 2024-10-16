@@ -8,7 +8,7 @@ const VacanciesHeader = () => {
         Find your vacancy<span>volunteer here!</span>
       </h1>
       <h2 className="flex flex-col items-center justify-center text-xs tracking-wider text-white md:text-base">
-        Be part of the Juniors Developers Group:{' '}
+        Be part of the Developers Group:{' '}
         <span>where talent is voluntary and innovation is infinite!</span>
       </h2>
     </header>
